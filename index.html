@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Company — Zari, Embroidery & Custom Stitching</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+:root{--maroon:#800020;--maroon-dark:#5c0017;--gold:#D4AF37;--gold-light:#e8c45a;--cream:#FFF8E7;--text-dark:#1A1A1A;--text-light:#fff;--border:#E5D5C0;--grey-100:#f7f5f2;--grey-200:#e8e4df;--grey-400:#a89f91;--grey-500:#7a6f5f;--success:#27ae60;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;--shadow-md:0 4px 12px rgba(0,0,0,0.12);--shadow-lg:0 8px 24px rgba(0,0,0,0.16);--shadow-xl:0 12px 40px rgba(0,0,0,0.2);--transition:all 0.3s ease}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-dark);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.3;color:var(--maroon)}
+a{text-decoration:none;color:var(--maroon);transition:var(--transition)}
+/* NAVBAR */
+.navbar{background:var(--maroon);position:sticky;top:0;z-index:1000;box-shadow:var(--shadow-md)}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.navbar-brand{display:flex;align-items:center;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--text-light)}
+.navbar-brand .brand-text{color:var(--gold);font-size:2rem;margin-right:2px}
+.navbar-nav{display:flex;align-items:center;gap:8px}
+.nav-link{color:rgba(255,255,255,0.85);font-size:0.9rem;font-weight:500;padding:8px 16px;border-radius:var(--radius-md)}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.1)}
+.nav-link.nav-btn{background:var(--gold);color:var(--text-dark);font-weight:600}
+.nav-link.nav-btn:hover{background:var(--gold-light)}
+/* HERO */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;background-image:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1920&q=80');background-size:cover;background-position:center}
+.hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(128,0,32,0.92) 0%,rgba(60,0,20,0.85) 100%)}
+.hero-content{position:relative;z-index:10;max-width:800px;margin:0 auto;padding:60px 24px;text-align:center}
+.hero-title{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--gold);margin-bottom:24px;text-shadow:2px 2px 4px rgba(0,0,0,0.3);line-height:1.2}
+.hero-subtitle{font-size:1.5rem;color:var(--text-light);margin-bottom:20px;font-weight:500}
+.hero-description{font-size:1.1rem;color:rgba(255,255,255,0.85);margin-bottom:40px;line-height:1.8;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;border:2px solid transparent;border-radius:var(--radius-md);cursor:pointer;transition:var(--transition)}
+.btn-primary{background:var(--gold);color:var(--text-dark);border-color:var(--gold)}
+.btn-primary:hover{background:#b8922d;border-color:#b8922d;color:var(--text-dark);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--text-light);border-color:var(--text-light)}
+.btn-outline:hover{background:var(--text-light);color:var(--maroon);transform:translateY(-2px)}
+/* TRUST BAR */
+.trust-bar{background:var(--maroon);padding:40px 24px}
+.trust-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.trust-item{display:flex;align-items:center;gap:16px;justify-content:center}
+.trust-icon{font-size:2.5rem;color:var(--gold)}
+.trust-number{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold);display:block}
+.trust-label{font-size:0.9rem;color:rgba(255,255,255,0.8);display:block}
+/* HOW IT WORKS */
+.how-works{padding:80px 24px;background:var(--cream)}
+.section-container{max-width:1200px;margin:0 auto}
+.section-title{font-size:2.5rem;text-align:center;color:var(--maroon);margin-bottom:12px}
+.section-subtitle{text-align:center;color:var(--grey-500);font-size:1.1rem;margin-bottom:60px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+.step-card{background:#fff;border:2px solid var(--border);border-radius:var(--radius-xl);padding:40px 32px;text-align:center;transition:var(--transition);position:relative}
+.step-card:hover{border-color:var(--gold);transform:translateY(-8px);box-shadow:var(--shadow-xl)}
+.step-card-center{border-color:var(--gold);background:linear-gradient(180deg,#fff 0%,#fffbf0 100%)}
+.step-number{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:var(--maroon);color:var(--gold);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;padding:8px 24px;border-radius:var(--radius-lg);border:2px solid var(--gold)}
+.step-icon{font-size:4rem;margin-bottom:24px}
+.step-card h3{font-size:1.4rem;margin-bottom:16px;color:var(--maroon)}
+.step-card p{color:var(--grey-500);margin-bottom:20px;line-height:1.7}
+.step-details{display:flex;flex-direction:column;gap:8px}
+.step-details span{color:var(--success);font-weight:600;font-size:0.9rem}
+/* PRODUCTS */
+.products-showcase{padding:80px 24px;background:var(--grey-100)}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.product-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,0.08);transition:var(--transition)}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.product-image{height:220px;background-size:cover;background-position:center;background-color:#e8e4df}
+.product-info{padding:20px}
+.product-info h3{font-size:1.2rem;color:var(--maroon);margin-bottom:8px}
+.product-info p{color:var(--grey-500);font-size:0.9rem;margin-bottom:12px}
+.product-price{color:#b8922d;font-weight:700;font-size:1rem}
+/* TESTIMONIAL */
+.testimonial-section{padding:80px 24px;background:var(--maroon)}
+.testimonial-container{max-width:800px;margin:0 auto}
+.testimonial-card{text-align:center;padding:48px}
+.testimonial-quote{font-size:6rem;color:var(--gold);line-height:1;margin-bottom:24px;opacity:0.5}
+.testimonial-text{font-size:1.25rem;color:var(--text-light);line-height:1.9;margin-bottom:40px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;justify-content:center;gap:16px}
+.author-avatar{width:56px;height:56px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.author-name{display:block;color:var(--gold);font-weight:700;font-size:1.1rem}
+.author-shop{display:block;color:rgba(255,255,255,0.7);font-size:0.9rem}
+/* CTA */
+.cta-section{padding:80px 24px;background:linear-gradient(135deg,var(--cream) 0%,#f5ecd8 100%);text-align:center}
+.cta-container{max-width:700px;margin:0 auto}
+.cta-container h2{font-size:2.5rem;margin-bottom:16px}
+.cta-container p{color:var(--grey-500);font-size:1.1rem;margin-bottom:32px}
+/* FOOTER */
+.footer{background:var(--text-dark);color:var(--text-light);padding:60px 24px 24px}
+.footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid #4a4035}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--text-light);margin-bottom:16px}
+.footer-tagline{color:var(--grey-400);font-size:0.95rem;line-height:1.7}
+.footer-links h4{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:20px}
+.footer-links ul{display:flex;flex-direction:column;gap:10px}
+.footer-links li{color:var(--grey-400);font-size:0.9rem}
+.footer-links a{color:var(--grey-400)}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;text-align:center;color:#7a6f5f;font-size:0.85rem}
+.gold-text{color:var(--gold)}
+@media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.navbar-nav{display:none}.hero-title{font-size:2.2rem}.hero-subtitle{font-size:1.2rem}.trust-container{grid-template-columns:repeat(2,1fr)}.steps-grid,.products-grid{grid-template-columns:1fr}.footer-container{grid-template-columns:1fr 1fr}.hero-buttons{flex-direction:column;align-items:center}}
+@media(max-width:480px){.trust-container{grid-template-columns:1fr}.hero-title{font-size:1.8rem}.section-title,.cta-container h2{font-size:1.8rem}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="navbar-brand"><span class="brand-text">R</span> COMPANY</a>
+            <ul class="navbar-nav">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="register.html" class="nav-link nav-btn">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Bus Order Aaya, Kahi Aur Bhejo, Ho Gaya.</h1>
+            <p class="hero-subtitle">Kapda, Zari, Silai — Sab Ek Jagah. Aap Sirf Order Dein.</p>
+            <p class="hero-description">
+                Pehle aapko 5 alag logon ko call karna padta tha — Fabric Supplier, Zari Master, Tailor, Quality Checker, aur phir bhi coordination ka headache. 
+                Ab R Company ke saath, sirf ek order do aur baaki sab hum sambhal lenge.
+            </p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary">Shopkeeper? Register Now</a>
+                <a href="login.html" class="btn btn-outline">Already a Partner? Login</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item">
+                <div class="trust-icon">&#9733;</div>
+                <div><span class="trust-number">200+</span><span class="trust-label">Dukaandaars Connected</span></div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#10022;</div>
+                <div><span class="trust-number">100%</span><span class="trust-label">Hand-Embroidered</span></div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#128337;</div>
+                <div><span class="trust-number">48hr</span><span class="trust-label">Turnaround</span></div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#128276;</div>
+                <div><span class="trust-number">0%</span><span class="trust-label">Coordination Hassle</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-works">
+        <div class="section-container">
+            <h2 class="section-title">Kaise Kaam Karta Hai?</h2>
+            <p class="section-subtitle">Sirf 3 steps mein apna kaam shuru karein</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">&#128196;</div>
+                    <h3>Place Your Order</h3>
+                    <p>Simple form fill karein — Product type, Fabric, Color, Embroidery details, aur measurements. Bas. Koi complicated process nahi.</p>
+                    <div class="step-details"><span>&#10003; Product Details</span><span>&#10003; Fabric Selection</span><span>&#10003; Reference Images</span></div>
+                </div>
+                <div class="step-card step-card-center">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">&#9881;</div>
+                    <h3>We Execute Everything</h3>
+                    <p>Hum Fabric laaye, Master se Zari karwaya, Silai karwaya, Quality check kiya — sab kuch ek jagah se. Aapko koi calls nahi karni.</p>
+                    <div class="step-details"><span>&#10003; Fabric Procurement</span><span>&#10003; Zari Embroidery</span><span>&#10003; Expert Stitching</span></div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">&#127873;</div>
+                    <h3>Deliver Happiness</h3>
+                    <p>Ready product aapke customer tak pohoch jata hai. Aap sirf apne customer ko deliver karo — baaki sab R Company ke hum.</p>
+                    <div class="step-details"><span>&#10003; Quality Assured</span><span>&#10003; On-time Delivery</span><span>&#10003; Customer Happy</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-showcase">
+        <div class="section-container">
+            <h2 class="section-title">Hamare Products</h2>
+            <p class="section-subtitle">Har occasion ke liye perfect handwork</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Sherwani</h3>
+                        <p>Royal wedding sherwani with intricate zari work. Perfect for grooms and special occasions.</p>
+                        <span class="product-price">Starting Rs. 5,000</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Kurta</h3>
+                        <p>Traditional kurta with beautiful embroidery. Comfort meets elegance for every festival.</p>
+                        <span class="product-price">Starting Rs. 2,500</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Bandhgala / Blazer</h3>
+                        <p>Modern bandhgala with traditional handwork. Perfect for receptions and parties.</p>
+                        <span class="product-price">Starting Rs. 4,000</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=600&q=80')"></div>
+                    <div class="product-info">
+                        <h3>Jodhpuri Suit</h3>
+                        <p>The royal Jodhpuri suit with hand-embroidered details. Make a grand statement.</p>
+                        <span class="product-price">Starting Rs. 8,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">&#8220;</div>
+                <p class="testimonial-text">
+                    Pehle 5 jagah call karna padta tha, fabric wale ko, zari karigar ko, tailor ko — har kisi ko alag se batana padta tha. 
+                    Ab sirf R Company app kholta hoon, order de deta hoon, aur sab ho jata hai. 
+                    Mera business double ho gaya, stress ekdum Kam.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">&#128100;</div>
+                    <div><span class="author-name">Mohammed Arif</span><span class="author-shop">Arif Textiles, Surat</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join 200+ shopkeepers who have already simplified their embroidery orders with R Company.</p>
+            <a href="register.html" class="btn btn-primary">Register Now — It's Free</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h3 class="footer-logo"><span class="gold-text">R</span> COMPANY</h3>
+                <p class="footer-tagline">Na Master Ki Chinta, Na Karigar Ki Silai Wale Ki.</p>
+                <p class="footer-tagline">Bus Order Aaya, Kahi Aur Bhejo, Ho Gaya.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul><li><a href="index.html">Home</a></li><li><a href="login.html">Login</a></li><li><a href="register.html">Register</a></li></ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul><li>Zari Embroidery</li><li>Fabric Procurement</li><li>Custom Stitching</li><li>Quality Check</li></ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul><li>Ahmedabad, Gujarat, India</li><li>Email: info@rcompany.com</li><li>Phone: +91 98765 43210</li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 R Company. All rights reserved. Made with love in Ahmedabad.</p></div>
+    </footer>
+</body>
+</html>
